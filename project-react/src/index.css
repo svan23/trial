@@ -1,0 +1,470 @@
+/*===============================
+  1. CSS VARIABLES & ROOT SETTINGS
+===============================*/
+:root {
+  /* Primary Colors */
+  --color-primary: #8F87F1;
+  --color-primary-dark: #7B73DD;
+  --color-secondary: #C68EFD;
+  --color-secondary-dark: #B27AE9;
+  
+  /* Accent Colors */
+  --color-tertiary: #E9A5F1;
+  --color-quaternary: #FED2E2;
+  
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  
+  /* Periwinkle Shades (replacing blue) */
+  --color-periwinkle-50: #F5F4FE;
+  --color-periwinkle-100: #ECEAFD;
+  --color-periwinkle-600: #8F87F1;
+  
+  /* Purple Shades (replacing indigo) */
+  --color-purple-50: #F9F4FF;
+  --color-purple-100: #F3E9FE;
+  --color-purple-600: #C68EFD;
+  --color-purple-700: #B27AE9;
+  
+  /* Pink Shades (replacing purple) */
+  --color-pink-50: #FCF6FA;
+  --color-pink-100: #FAEDF8;
+  --color-pink-500: #E9A5F1;
+  --color-pink-600: #DD95E5;
+  
+  /* Light Pink Shades */
+  --color-lightpink-50: #FFF9FB;
+  --color-lightpink-100: #FFF0F5;
+  --color-lightpink-500: #FED2E2;
+  --color-lightpink-600: #FDB8D3;
+  
+  /* Other Variables */
+  --border-radius-lg: 0.75rem;
+  --transition-normal: all 0.3s;
+}
+
+/*===============================
+  2. BUTTON STYLES
+===============================*/
+/* Button basic styling */
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Gradient buttons */
+.btn-gradient-primary {
+  background: linear-gradient(to right, #8F87F1, #C68EFD);
+  border: none;
+  color: white;
+}
+
+.btn-gradient-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-tertiary));
+  border: none;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+
+/* Shine effect for buttons */
+.btn-shine {
+  position: absolute;
+  top: -10%;
+  left: -20%;
+  width: 40%;
+  height: 150%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(25deg);
+  transition: all 0.7s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.btn-gradient-primary:hover .btn-shine {
+  left: 120%;
+}
+
+/*===============================
+  3. NAVIGATION & TABS
+===============================*/
+/* Tab navigation styling */
+.nav-tabs .nav-link.active {
+  color: var(--color-primary);
+  border-color: #dee2e6 #dee2e6 #fff;
+  border-bottom-width: 2px;
+  font-weight: 500;
+}
+
+/* Nav Links */
+.nav-link.active {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+/*===============================
+  4. CARD COMPONENTS
+===============================*/
+/* Feature cards styling */
+.feature-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.feature-card {
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card hover effects */
+.card-hover-gradient:hover {
+  border-color: var(--color-tertiary);
+  box-shadow: 0 5px 15px rgba(143, 135, 241, 0.2);
+}
+
+/*===============================
+  5. IMAGE UPLOAD COMPONENT
+===============================*/
+/* Image upload container */
+.image-upload-container {
+  aspect-ratio: 1/1;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.image-upload-container:hover {
+  border-color: var(--color-primary) !important;
+  background-color: rgba(143, 135, 241, 0.05);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*===============================
+  6. RESULTS DISPLAY COMPONENT
+===============================*/
+/* Progress bar custom heights */
+.progress-thin {
+  height: 0.5rem;
+}
+
+/* Progress bars */
+.progress-bar-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-tertiary));
+}
+
+/* Results section styling */
+.result-success {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.result-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.result-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.close-button:hover {
+  background: rgba(255,255,255,0.8) !important;
+  transform: rotate(90deg);
+}
+
+/*===============================
+  7. DIVIDERS & ACCENTS
+===============================*/
+/* Custom section dividers */
+.gradient-divider {
+  height: 4px;
+  background: linear-gradient(to right, #8F87F1, #E9A5F1);
+  opacity: 1;
+  width: 25%;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Footer divider */
+.footer-divider {
+  height: 4px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-tertiary), var(--color-quaternary));
+  opacity: 1;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/*===============================
+  8. BACKGROUND GRADIENTS
+===============================*/
+/* Custom gradient backgrounds */
+.bg-gradient-pastel {
+  background: linear-gradient(to right, var(--color-periwinkle-100), var(--color-lightpink-100));
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(to right, var(--color-primary), var(--color-tertiary));
+}
+
+/* Tailwind-like gradient utilities */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+/* Periwinkle to Purple Gradient */
+.from-periwinkle-600 {
+  --tw-gradient-from: #8F87F1;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(143, 135, 241, 0));
+}
+
+.to-purple-700 {
+  --tw-gradient-to: #C68EFD;
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+/* Light Gradients */
+.from-periwinkle-50 {
+  --tw-gradient-from: #F5F4FE;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(245, 244, 254, 0));
+}
+
+.to-periwinkle-100 {
+  --tw-gradient-to: #ECEAFD;
+}
+
+.from-purple-50 {
+  --tw-gradient-from: #F9F4FF;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(249, 244, 255, 0));
+}
+
+.to-purple-100 {
+  --tw-gradient-to: #F3E9FE;
+}
+
+.from-pink-50 {
+  --tw-gradient-from: #FCF6FA;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(252, 246, 250, 0));
+}
+
+.to-pink-100 {
+  --tw-gradient-to: #FAEDF8;
+}
+
+.from-lightpink-50 {
+  --tw-gradient-from: #FFF9FB;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 249, 251, 0));
+}
+
+.to-lightpink-100 {
+  --tw-gradient-to: #FFF0F5;
+}
+
+/*===============================
+  9. SCROLLING IMAGES COMPONENT
+===============================*/
+/* Scrolling Images Component Styles */
+.scroll-image-container {
+  height: 100vh;
+  min-height: 500px;
+  max-height: 100vh;
+  width: 100%;
+  margin-top: -76px; /* Adjust based on navbar height */
+}
+
+.image-scroll-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-image var(--scroll-duration, 45s) linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.image-scroll-track.animate {
+  opacity: 1;
+}
+
+.image-scroll-item {
+  height: 100vh;
+  min-width: 300px;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.celebrity-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(20%);
+  transition: all 0.3s ease;
+}
+
+.image-scroll-item:hover .celebrity-image {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/*===============================
+  10. TEXT COLORS & BADGES
+===============================*/
+/* Text colors */
+.text-periwinkle-100 {
+  color: var(--color-periwinkle-100);
+}
+
+.text-purple-700 {
+  color: var(--color-purple-700);
+}
+
+.text-purple-600 {
+  color: var(--color-purple-600);
+}
+
+.text-pink-500 {
+  color: var(--color-pink-500);
+}
+
+.text-pink-600 {
+  color: var(--color-pink-600);
+}
+
+.text-lightpink-500 {
+  color: var(--color-lightpink-500);
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.badge-primary {
+  background-color: var(--color-primary);
+}
+
+/*===============================
+  11. UTILITY CLASSES
+===============================*/
+/* Helper classes */
+.border-2 {
+  border-width: 2px;
+}
+
+.rounded-4 {
+  border-radius: var(--border-radius-lg);
+}
+
+.position-absolute.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.transition {
+  transition: var(--transition-normal);
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1 !important;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Z-index for overlays */
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+/*===============================
+  12. DARK MODE STYLES
+===============================*/
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .bg-light {
+    background-color: #2B2543 !important;
+  }
+  
+  .text-secondary {
+    color: #ECEAFD !important;
+  }
+  
+  .border-secondary {
+    border-color: #5D5393 !important;
+  }
+}
+
+/*===============================
+  13. ANIMATIONS
+===============================*/
+@keyframes scroll-image {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*===============================
+  14. RESPONSIVE STYLES
+===============================*/
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-scroll-item {
+    min-width: 200px;
+  }
+}
